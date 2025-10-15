@@ -753,7 +753,7 @@ impl Generator {
         stage.aggregate_fees += data.transaction_fees;
         context.aggregate_fees += data.transaction_fees;
 
-        if context.aggregated_utxos < 2 {
+        if context.aggregated_utxos < 1 {
             Ok((DataKind::NoOp, data))
         } else if stage.number_of_transactions > 0 {
             data.aggregate_mass += self.inner.standard_change_output_compute_mass;
